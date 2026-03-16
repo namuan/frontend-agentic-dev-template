@@ -20,4 +20,3 @@ The cleanup agent scans this file and opens PRs for items marked `auto-fixable: 
 ## Open items
 
 <!-- Add new items above this line -->
-
