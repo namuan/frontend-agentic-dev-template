@@ -1,0 +1,20 @@
+.empty {
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  background: var(--color-surface-elevated);
+  border: var(--border-width) solid var(--color-border);
+  text-align: center;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.description {
+  margin: 0;
+  color: var(--color-text-muted);
+}

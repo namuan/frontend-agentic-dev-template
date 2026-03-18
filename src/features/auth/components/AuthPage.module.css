@@ -1,0 +1,76 @@
+.page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.hero {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.form {
+  background: var(--color-surface-elevated);
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-border);
+  padding: var(--space-6);
+  display: grid;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-card);
+}
+
+.error {
+  margin: 0;
+  color: var(--color-danger);
+  font-size: 0.9rem;
+}
+
+.centered {
+  display: grid;
+  place-items: center;
+  gap: var(--space-3);
+  padding: var(--space-7);
+}
+
+.loadingText {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.sessionCard {
+  background: var(--color-surface-elevated);
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  box-shadow: var(--shadow-card);
+}
+
+.meta {
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-muted);
+}
