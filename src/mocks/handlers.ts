@@ -1,4 +1,4 @@
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 import {
   createSession,
   getDashboardData,
@@ -10,38 +10,38 @@ import {
 } from './data';
 
 export const handlers = [
-  rest.get('/api/session', async (req, res, ctx) => {
+  http.get('/api/session', async () => {
     await delay(200);
-    return res(ctx.json({ session: getSession() }));
+    return HttpResponse.json({ session: getSession() });
   }),
-  rest.post('/api/login', async (req, res, ctx) => {
+  http.post('/api/login', async () => {
     await delay(300);
     const session = createSession();
     setSession(session);
-    return res(ctx.json(session));
+    return HttpResponse.json(session);
   }),
-  rest.post('/api/logout', async (req, res, ctx) => {
+  http.post('/api/logout', async () => {
     await delay(150);
     resetSession();
-    return res(ctx.json({ ok: true }));
+    return HttpResponse.json({ ok: true });
   }),
-  rest.get('/api/dashboard', async (req, res, ctx) => {
+  http.get('/api/dashboard', async () => {
     await delay(250);
-    return res(ctx.json(getDashboardData()));
+    return HttpResponse.json(getDashboardData());
   }),
-  rest.get('/api/settings', async (req, res, ctx) => {
+  http.get('/api/settings', async () => {
     await delay(250);
-    return res(ctx.json(getSettings()));
+    return HttpResponse.json(getSettings());
   }),
-  rest.post('/api/settings', async (req, res, ctx) => {
+  http.post('/api/settings', async ({ request }) => {
     await delay(250);
-    const body = req.body as Partial<{ theme: string; notifications: boolean; weeklyDigest: boolean }>;
+    const body = await request.json() as Partial<{ theme: string; notifications: boolean; weeklyDigest: boolean }>;
     const settings = updateSettings({
       theme: body.theme === 'dawn' ? 'dawn' : 'midnight',
       notifications: Boolean(body.notifications),
       weeklyDigest: Boolean(body.weeklyDigest),
     });
-    return res(ctx.json(settings));
+    return HttpResponse.json(settings);
   }),
 ];
 

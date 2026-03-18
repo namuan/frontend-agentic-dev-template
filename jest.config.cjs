@@ -1,6 +1,12 @@
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons'],
+  },
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {}],
+    '^.+\\.js$': ['@swc/jest', { jsc: { parser: { syntax: 'ecmascript' } }, module: { type: 'commonjs' } }],
+  },
   setupFiles: ['<rootDir>/tests/setupGlobals.js'],
   setupFilesAfterEnv: ['<rootDir>/tests/setupTests.ts'],
   moduleNameMapper: {
@@ -9,4 +15,7 @@ module.exports = {
     '\\.(css)$': '<rootDir>/tests/styleMock.js',
   },
   testPathIgnorePatterns: ['<rootDir>/tests/e2e/'],
+  transformIgnorePatterns: [
+    '/node_modules/(?!(until-async|tough-cookie)/)/',
+  ],
 };
