@@ -1,0 +1,109 @@
+.page {
+  display: grid;
+  grid-template-columns: var(--size-sidebar) 1fr;
+  min-height: 100vh;
+  background: var(--gradient-hero);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-5);
+  background: linear-gradient(180deg, var(--color-surface-elevated), var(--color-surface));
+  border-right: var(--border-width) solid var(--color-border);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+}
+
+.pulse {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+}
+
+.nav {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.navLink {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-text-primary);
+}
+
+.active {
+  background: var(--gradient-card);
+  border: var(--border-width) solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.footerTitle {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.footerValue {
+  margin: var(--space-2) 0 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.main {
+  padding: var(--space-7);
+}
+
+.surface {
+  max-width: var(--size-content);
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (max-width: 56.25rem) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav {
+    grid-auto-flow: column;
+    gap: var(--space-2);
+  }
+
+  .sidebarFooter {
+    display: none;
+  }
+}

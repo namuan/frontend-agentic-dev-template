@@ -1,0 +1,50 @@
+:root {
+  --font-sans: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+
+  --color-bg: #0b0f14;
+  --color-surface: #121a23;
+  --color-surface-elevated: #182433;
+  --color-border: #243246;
+  --color-text-primary: #f2f5f7;
+  --color-text-muted: #a6b1c2;
+  --color-accent: #f5b14c;
+  --color-accent-strong: #f08a24;
+  --color-danger: #ff6b6b;
+  --color-success: #4ecb71;
+  --color-on-accent: #1b1206;
+  --color-on-danger: #1b0c0c;
+  --color-overlay: rgba(11, 15, 20, 0.72);
+
+  --gradient-hero: radial-gradient(circle at top left, #1f3351 0%, #0b0f14 55%);
+  --gradient-card: linear-gradient(135deg, rgba(245, 177, 76, 0.12), rgba(18, 26, 35, 0.12));
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  --border-width-thick: 3px;
+  --size-spinner: 36px;
+  --size-modal: 520px;
+  --size-toast: 320px;
+  --size-sidebar: 280px;
+  --size-content: 1200px;
+
+  --shadow-soft: 0 18px 40px rgba(8, 12, 18, 0.45);
+  --shadow-card: 0 10px 30px rgba(11, 15, 20, 0.35);
+  --focus-ring: 0 0 0 2px rgba(245, 177, 76, 0.2);
+  --lift-sm: -1px;
+
+  --transition-fast: 150ms ease;
+}

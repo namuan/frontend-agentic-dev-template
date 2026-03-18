@@ -1,0 +1,54 @@
+.viewport {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+  z-index: 60;
+}
+
+.toast {
+  background: var(--color-surface-elevated);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-width: min(var(--size-toast), 90vw);
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.dismiss {
+  background: transparent;
+  border: var(--border-width) solid transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.8rem;
+}
+
+.info {
+  border-color: var(--color-border);
+}
+
+.success {
+  border-color: var(--color-success);
+}
+
+.error {
+  border-color: var(--color-danger);
+}

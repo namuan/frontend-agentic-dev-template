@@ -1,0 +1,127 @@
+.page {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-4);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+
+.title {
+  margin: var(--space-2) 0 0;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-muted);
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.summaryCard {
+  background: var(--color-surface-elevated);
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--color-border);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.summaryLabel {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.summaryValue {
+  margin: 0;
+  font-size: 2rem;
+  font-family: var(--font-display);
+}
+
+.signalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.signalCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-border);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-card);
+}
+
+.signalTitle {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.signalMeta {
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.signalFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.status {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.timestamp {
+  font-variant-numeric: tabular-nums;
+}
+
+.stable {
+  border-color: var(--color-success);
+}
+
+.watch {
+  border-color: var(--color-accent);
+}
+
+.critical {
+  border-color: var(--color-danger);
+}
+
+.centered {
+  display: grid;
+  place-items: center;
+  gap: var(--space-3);
+  padding: var(--space-7);
+}
+
+.loadingText {
+  margin: 0;
+  color: var(--color-text-muted);
+}
